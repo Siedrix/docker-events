@@ -5,7 +5,7 @@ const env = require('./env')
 
 const modem = new Docker(env.docker.conf)
 
-modem.listContainers(function (err, containers) {
+modem.listContainers({all:true},function (err, containers) {
 	if(err){
 		return console.log('Error', err)
 	}

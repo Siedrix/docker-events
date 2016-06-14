@@ -4,7 +4,7 @@ const Docker = require('dockerode')
 const endpoint = 'http://192.168.99.100'
 const env = require('./env')
 
-const proxy = require('redbird')({port: 8000})
+const proxy = require('redbird')({port: 80})
 const modem = new Docker(env.docker.conf)
 
 const parseEnvVars = function(envVars){
